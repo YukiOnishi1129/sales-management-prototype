@@ -564,8 +564,8 @@ func init() {
 	// データベース接続設定
 	dbHost := getEnv("DB_HOST", "localhost")
 	dbPort := getEnv("DB_PORT", "5432")
-	dbUser := getEnv("DB_USER", "postgres")
-	dbPassword := getEnv("DB_PASSWORD", "postgres")
+	dbUser := getEnv("DB_USER", "user")
+	dbPassword := getEnv("DB_PASSWORD", "pass")
 	dbName := getEnv("DB_NAME", "sales_management")
 
 	// データベース接続文字列

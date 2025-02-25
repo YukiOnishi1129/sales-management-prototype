@@ -1,4 +1,4 @@
-FROM golang:1.21-alpine
+FROM golang:1.23.5-alpine
 
 WORKDIR /app
 
@@ -16,7 +16,7 @@ COPY . .
 RUN go build -o main .
 
 # ホットリロード用にair（開発用）をインストール
-RUN go install github.com/cosmtrek/air@latest
+RUN go install github.com/air-verse/air@latest
 
 # 実行コマンド（開発モード）
 CMD ["air", "-c", ".air.toml"]
