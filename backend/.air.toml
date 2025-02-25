@@ -1,0 +1,35 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+# バイナリ名
+bin = "./tmp/main"
+# Goコマンド
+cmd = "go build -o ./tmp/main ."
+# 監視対象ファイル
+include_ext = ["go", "mod", "sum"]
+# 無視するディレクトリ
+exclude_dir = ["assets", "tmp", "vendor"]
+# 無視するファイル
+exclude_file = []
+# 無視する正規表現
+exclude_regex = ["_test.go"]
+# フルビルドか増分ビルドか
+full_bin = ""
+# ファイル変更後にビルドするまでの遅延時間
+delay = 1000 # ms
+
+[log]
+# ログファイルのパス
+time = false
+
+[color]
+# ログに色を付けるか
+main = "magenta"
+watcher = "cyan"
+build = "yellow"
+runner = "green"
+
+[misc]
+# ファイルの変更を検知した際に対象でないファイル変更を無視するか
+clean_on_exit = true
